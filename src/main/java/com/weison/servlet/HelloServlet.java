@@ -11,8 +11,8 @@ import java.io.IOException;
  * @author Weison
  * @date 2020/9/3
  */
-@WebServlet(urlPatterns = "/demo1")
-public class WeisonServlet extends HttpServlet {
+@WebServlet(urlPatterns = "/hello")
+public class HelloServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
