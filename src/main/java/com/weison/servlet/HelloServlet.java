@@ -2,6 +2,7 @@ package com.weison.servlet;
 
 import com.weison.service.HelloService;
 import com.weison.service.HelloServiceImpl;
+import com.weison.util.BeanFactory;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.annotation.WebServlet;
@@ -20,6 +21,7 @@ import java.io.IOException;
 public class HelloServlet extends HttpServlet {
 
     private HelloService helloService = new HelloServiceImpl();
+    private HelloService service = (HelloService) BeanFactory.getBean("helloService");
 
 
     /**
@@ -42,6 +44,12 @@ public class HelloServlet extends HttpServlet {
             response.getWriter().println(helloService.findAll(db).toString());
         } else if (uri.equals("/hi")) {
             response.getWriter().println(helloService.getAll(db).toString());
+        } else if (uri.equals("/hola")) {
+            response.getWriter().println(service.get(db).toString());
+        }else if (uri.equals("/beans")) {
+            response.getWriter().println(service.getBeans().toString());
+        } else if (uri.equals("/cacheBeans")) {
+            response.getWriter().println(service.getCacheBeans().toString());
         }
     }
 

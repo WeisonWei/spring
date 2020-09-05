@@ -8,4 +8,10 @@ public interface HelloService {
 
     List<String> getAll(String db);
 
+    List<String> get(String db);
+
+    List<Object> getBeans();
+
+    List<Object> getCacheBeans();
+
 }
