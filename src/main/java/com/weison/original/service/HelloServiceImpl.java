@@ -1,7 +1,7 @@
-package com.weison.service;
+package com.weison.original.service;
 
-import com.weison.dao.HelloDao;
-import com.weison.util.BeanFactory;
+import com.weison.original.dao.HelloDao;
+import com.weison.original.util.BeanFactory;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;

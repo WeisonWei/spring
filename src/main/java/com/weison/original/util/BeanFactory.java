@@ -1,8 +1,8 @@
-package com.weison.util;
+package com.weison.original.util;
 
-import com.weison.dao.HelloDao;
-import com.weison.dao.HelloDaoImpl;
-import com.weison.dao.HelloMysqlDaoImpl;
+import com.weison.original.dao.HelloDao;
+import com.weison.original.dao.HelloDaoImpl;
+import com.weison.original.dao.HelloMysqlDaoImpl;
 import lombok.SneakyThrows;
 
 import java.io.IOException;
@@ -22,9 +22,9 @@ public class BeanFactory {
     //2 反射 -- 弱依赖  -- 硬编码2
     public static HelloDao getHelloDaoNew(String name) {
         if ("mysql".equals(name)) {
-            return getDao("com.weison.dao.HelloMysqlDaoImpl");
+            return getDao("com.weison.original.dao.HelloMysqlDaoImpl");
         }
-        return getDao("com.weison.dao.HelloDaoImpl");
+        return getDao("com.weison.original.dao.HelloDaoImpl");
     }
 
     //3 引入外部化配置文件 -- 改良

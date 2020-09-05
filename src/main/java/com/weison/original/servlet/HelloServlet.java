@@ -1,8 +1,8 @@
-package com.weison.servlet;
+package com.weison.original.servlet;
 
-import com.weison.service.HelloService;
-import com.weison.service.HelloServiceImpl;
-import com.weison.util.BeanFactory;
+import com.weison.original.service.HelloService;
+import com.weison.original.service.HelloServiceImpl;
+import com.weison.original.util.BeanFactory;
 import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.annotation.WebServlet;

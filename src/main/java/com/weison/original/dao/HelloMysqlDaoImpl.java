@@ -1,4 +1,4 @@
-package com.weison.dao;
+package com.weison.original.dao;
 
 import java.util.Arrays;
 import java.util.List;

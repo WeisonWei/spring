@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="person" class="com.weison.spring.bean.Person">
+        <property name="name" value="Weison"/>
+        <property name="age" value="18"/>
+    </bean>
+
+    <bean id="cat" class="com.weison.spring.bean.Cat">
+        <property name="name" value="Nikki"/>
+        <property name="master" ref="person"/>
+    </bean>
+
+</beans>
