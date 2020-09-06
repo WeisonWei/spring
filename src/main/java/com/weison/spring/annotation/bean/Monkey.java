@@ -1,7 +1,9 @@
 package com.weison.spring.annotation.bean;
 
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Value;
 
-@Component(value = "bigHorseMonkey")
 public class Monkey {
+
+    @Value("Even")
+    private String name;
 }

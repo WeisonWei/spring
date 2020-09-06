@@ -6,7 +6,13 @@ import com.weison.spring.annotation.bean.Tiger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-//一个配置类就可以类似的理解为一个xml
+/**
+ * @author weison
+ * @description 一个配置类就可以类似的理解为一个xml
+ * @description @Bean 需要与 @Configuration 配合使用
+ * @date 2020 09 06
+ * @see
+ */
 @Configuration
 public class BeanConfiguration {
 

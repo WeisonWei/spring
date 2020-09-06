@@ -1,5 +1,6 @@
 package com.weison.spring.annotation;
 
+import com.weison.spring.annotation.bean.Mermaid;
 import com.weison.spring.annotation.config.ImportXmlAnnotationConfiguration;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContext;
@@ -19,6 +20,8 @@ public class XmlAnnotationApplicationContext {
 
         Arrays.stream(beanDefinitionNames).forEach(name -> log.info("-1->" + name));
 
+        //TODO 未读取到值
+        Mermaid mermaid = context.getBean(Mermaid.class);
         log.info("---XmlAnnotationApplicationContext---");
     }
 
