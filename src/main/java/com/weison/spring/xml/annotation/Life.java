@@ -1,4 +1,4 @@
-package com.weison.spring.annotation;
+package com.weison.spring.xml.annotation;
 
 import java.lang.annotation.*;
 

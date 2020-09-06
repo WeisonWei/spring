@@ -5,12 +5,12 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="person" class="com.weison.spring.bean.Person">
+    <bean id="person" class="com.weison.spring.xml.bean.Person">
         <property name="name" value="Weison"/>
         <property name="age" value="18"/>
     </bean>
 
-    <bean id="cat" class="com.weison.spring.bean.Cat">
+    <bean id="cat" class="com.weison.spring.xml.bean.Cat">
         <property name="name" value="Nikki"/>
         <property name="master" ref="person"/>
     </bean>

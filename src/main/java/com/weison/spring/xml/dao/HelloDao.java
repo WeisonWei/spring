@@ -1,4 +1,4 @@
-package com.weison.spring.dao;
+package com.weison.spring.xml.dao;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.weison.spring.bean;
+package com.weison.spring.xml.bean;
 
 import lombok.Data;
 

@@ -1,8 +1,8 @@
-package com.weison.spring;
+package com.weison.spring.xml;
 
-import com.weison.spring.annotation.Life;
-import com.weison.spring.bean.Pig;
-import com.weison.spring.dao.HelloDao;
+import com.weison.spring.xml.annotation.Life;
+import com.weison.spring.xml.bean.Pig;
+import com.weison.spring.xml.dao.HelloDao;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.context.ApplicationContext;
@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.Map;
 
 @Slf4j
-public class SpringApplicationContext {
+public class XmlApplicationContext {
 
     /**
      * org.springframework.beans 和 org.springframework.context 包是 SpringFramework 的 IOC 容器的基础。
@@ -59,4 +59,5 @@ public class SpringApplicationContext {
         log.info("---getBeanProvider---");
 
     }
+
 }
