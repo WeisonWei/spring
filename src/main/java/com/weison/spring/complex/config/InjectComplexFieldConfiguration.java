@@ -1,14 +1,15 @@
 package com.weison.spring.complex.config;
 
-import com.weison.spring.complex.bean.Class;
-import com.weison.spring.complex.bean.Student;
-import com.weison.spring.complex.bean.Teacher;
+import com.weison.spring.complex.beans.pojo.Class;
+import com.weison.spring.complex.beans.pojo.Student;
+import com.weison.spring.complex.beans.pojo.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+
+import java.util.List;
 
 /**
  * @author weison
@@ -17,30 +18,36 @@ import org.springframework.context.annotation.Primary;
  * @see
  */
 @Configuration
-@ComponentScan(value = "com.weison.spring.complex.bean")
 public class InjectComplexFieldConfiguration {
+
+
+    @Primary
+    @Bean("littleClass")
+    public Class littleClass() {
+        Class aClass = new Class();
+        aClass.setGrade("小小班");
+        aClass.setName("小小班");
+        return aClass;
+    }
 
     @Bean("classOne")
     public Class classOne() {
         Class aClass = new Class();
-        aClass.setName("一班");
         aClass.setGrade("小班");
+        aClass.setName("一班");
         return aClass;
     }
 
-    @Primary
     @Bean("classTwo")
     public Class classTwo() {
         Class aClass = new Class();
-        aClass.setName("二班");
         aClass.setGrade("大班");
+        aClass.setName("二班");
         return aClass;
     }
 
     @Bean("musicTeacher")
-    @Qualifier("classOne")
-    @Autowired
-    public Teacher musicTeacher(Class aClass) {
+    public Teacher musicTeacher(@Autowired @Qualifier("classOne") Class aClass) {
         Teacher teacher = new Teacher();
         teacher.setName("音乐老师");
         teacher.setAge(21);
@@ -49,9 +56,7 @@ public class InjectComplexFieldConfiguration {
     }
 
     @Bean("englishTeacher")
-    @Qualifier("classTwo")
-    @Autowired
-    public Teacher englishTeacher(Class aClass) {
+    public Teacher englishTeacher(@Autowired @Qualifier("classTwo") Class aClass) {
         Teacher teacher = new Teacher();
         teacher.setName("英语老师");
         teacher.setAge(22);
@@ -60,12 +65,12 @@ public class InjectComplexFieldConfiguration {
     }
 
     @Bean("studentOne")
-    @Qualifier("classTwo")
-    public Student studentOne(@Autowired Class aClass) {
+    public Student studentOne(@Autowired List<Class> aClass, @Autowired List<Teacher> teachers) {
         Student student = new Student();
         student.setName("小明");
         student.setAge(4);
-        student.setAClass(aClass);
+        student.setClasses(aClass);
+        student.setTeachers(teachers);
         return student;
     }
 

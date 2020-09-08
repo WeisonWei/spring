@@ -10,6 +10,6 @@ import org.springframework.context.annotation.Configuration;
  * @see
  */
 @Configuration
-@ComponentScan(value = "com.weison.spring.complex.bean")
+@ComponentScan(value = "com.weison.spring.complex.beans.bean")
 public class ComponentScanConfig {
 }

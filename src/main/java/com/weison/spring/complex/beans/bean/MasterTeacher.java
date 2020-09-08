@@ -1,4 +1,4 @@
-package com.weison.spring.complex.bean;
+package com.weison.spring.complex.beans.bean;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,15 +13,15 @@ import org.springframework.stereotype.Component;
  * @see
  */
 @Data
-@Component
-public class Student {
+@Component("master")
+public class MasterTeacher {
 
-    @Value("二宝")
+    @Value("李老师")
     private String name;
-    @Value("3")
+    @Value("16")
     private Integer age;
     @Autowired(required = false)
-    @Qualifier("classTwo")
-    private Class aClass;
+    @Qualifier("littleClass")
+    private ClassBean aClass;
 
 }

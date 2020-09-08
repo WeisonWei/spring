@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author weison
- * @description Fish bean
+ * @description Fish beans
  * @date 20-9-6 下午6:59
  * @see
  */

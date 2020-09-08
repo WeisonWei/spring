@@ -12,7 +12,7 @@ public class ComponentScanApplicationContext {
     public static void main(String[] args) {
         //1 获取@Component @Controller @Service 等bean注解 配合 @ComponentScan使用
         //此处已经配置扫描包全限定名 不需要使用@ComponentScan 也能加载
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.weison.spring.annotation.bean");
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.weison.spring.annotation.beans");
 
         String[] beanDefinitionNames = context.getBeanDefinitionNames();
 

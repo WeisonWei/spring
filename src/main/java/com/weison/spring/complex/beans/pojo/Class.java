@@ -1,4 +1,4 @@
-package com.weison.spring.complex.bean;
+package com.weison.spring.complex.beans.pojo;
 
 import lombok.Data;
 
@@ -9,10 +9,9 @@ import lombok.Data;
  * @see
  */
 @Data
-public class Teacher {
+public class Class {
 
+    private String grade;
     private String name;
-    private Integer age;
-    private Class aClass;
 
 }
