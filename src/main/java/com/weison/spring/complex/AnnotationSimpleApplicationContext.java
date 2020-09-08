@@ -13,7 +13,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * @see
  */
 @Slf4j
-public class SimpleApplicationContext {
+public class AnnotationSimpleApplicationContext {
 
     /**
      * @param args
@@ -40,6 +40,9 @@ public class SimpleApplicationContext {
         log.info("student-->" + student);
         log.info("studentLog-->" + studentLog);
         log.info("teacherLog-->" + teacherLogBean);
+
+        School school = (School) context.getBean("school");
+        log.info("school-->" + school);
 
     }
 
