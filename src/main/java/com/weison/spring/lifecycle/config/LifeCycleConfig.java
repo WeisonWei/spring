@@ -15,6 +15,6 @@ public class LifeCycleConfig {
 
     @Bean(initMethod = "init", destroyMethod = "destroy")
     public Girl littleGirl() {
-        return new Girl();
+        return new Girl().setName("Alice");
     }
 }

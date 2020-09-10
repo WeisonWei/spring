@@ -1,6 +1,7 @@
 package com.weison.spring.lifecycle.bean;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -11,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Data
 @Slf4j
+@Accessors(chain = true)
 public class Girl {
 
     private String name;
