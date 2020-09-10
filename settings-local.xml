@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
     <!-- 本地仓库的位置 -->
     <localRepository>${user.home}/.m2/repository</localRepository>
@@ -13,10 +12,14 @@
     <!-- 私服发布的用户名密码 -->
     <servers>
         <server>
-            <id>github</id>
-            <username>WeisonWei</username>
-            <!--af7bb5a9b053e5332e7278e804fde0b0fcd21574-->
-            <password>github密码</password>
+            <id>releases</id>
+            <username>deployment</username>
+            <password>He2019</password>
+        </server>
+        <server>
+            <id>snapshots</id>
+            <username>deployment</username>
+            <password>He2019</password>
         </server>
     </servers>
 
@@ -25,6 +28,7 @@
         <mirror>
             <id>alimaven</id>
             <name>aliyun maven</name>
+            <!-- https://maven.aliyun.com/repository/public/ -->
             <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
             <mirrorOf>central</mirrorOf>
         </mirror>
@@ -51,11 +55,11 @@
 
         <!-- Nexus私服配置: 第三方jar包下载, 比如oracle的jdbc驱动等 -->
         <profile>
-            <id>github</id>
+            <id>dev</id>
             <repositories>
                 <repository>
-                    <id>central</id>
-                    <url>https://repo1.maven.org/maven2</url>
+                    <id>nexus</id>
+                    <url>http://nexus.hepengju.cn:8081/nexus/content/groups/public/</url>
                     <releases>
                         <enabled>true</enabled>
                     </releases>
@@ -63,12 +67,14 @@
                         <enabled>true</enabled>
                     </snapshots>
                 </repository>
-                <repository>
-                    <id>github</id>
-                    <name>GitHub WeisonWei Apache Maven Packages</name>
-                    <url>https://maven.pkg.github.com/WeisonWei/spring</url>
-                </repository>
             </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>public</id>
+                    <name>Public Repositories</name>
+                    <url>http://nexus.hepengju.cn:8081/nexus/content/groups/public/</url>
+                </pluginRepository>
+            </pluginRepositories>
         </profile>
 
         <!-- 阿里云配置: 提高国内的jar包下载速度 -->
@@ -100,9 +106,8 @@
 
     <!-- 激活配置 -->
     <activeProfiles>
-        <activeProfile>github</activeProfile>
         <activeProfile>jdk1.8</activeProfile>
+        <activeProfile>dev</activeProfile>
         <activeProfile>ali</activeProfile>
     </activeProfiles>
-
 </settings>
