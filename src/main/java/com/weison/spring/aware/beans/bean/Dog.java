@@ -1,4 +1,4 @@
-package com.weison.aware.beans.bean;
+package com.weison.spring.aware.beans.bean;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.ObjectProvider;

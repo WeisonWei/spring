@@ -1,4 +1,4 @@
-package com.weison.aware.config;
+package com.weison.spring.aware.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2020/9/8
  */
 @Configuration
-@ComponentScan(value = "com.weison.aware.beans.bean")
+@ComponentScan(value = "com.weison.spring.aware.beans.bean")
 public class AwareConfiguration {
 
     @Bean

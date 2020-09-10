@@ -1,8 +1,8 @@
-package com.weison.aware;
+package com.weison.spring.aware;
 
-import com.weison.aware.beans.bean.Dog;
-import com.weison.aware.config.AwareConfiguration;
-import com.weison.aware.config.BeanAware;
+import com.weison.spring.aware.beans.bean.Dog;
+import com.weison.spring.aware.config.AwareConfiguration;
+import com.weison.spring.aware.config.BeanAware;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationContext;

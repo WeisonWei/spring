@@ -1,4 +1,4 @@
-package com.weison.aware.config;
+package com.weison.spring.aware.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;

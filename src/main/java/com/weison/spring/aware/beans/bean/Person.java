@@ -1,4 +1,4 @@
-package com.weison.aware.beans.bean;
+package com.weison.spring.aware.beans.bean;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;

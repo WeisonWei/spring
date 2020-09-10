@@ -1,4 +1,4 @@
-package com.weison.aware.beans.pojo;
+package com.weison.spring.aware.beans.pojo;
 
 /**
  * @author weixiaoxing
