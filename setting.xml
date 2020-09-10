@@ -102,6 +102,7 @@
     <activeProfiles>
         <activeProfile>github</activeProfile>
         <activeProfile>jdk1.8</activeProfile>
+        <activeProfile>dev</activeProfile>
         <activeProfile>ali</activeProfile>
     </activeProfiles>
 
