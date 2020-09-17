@@ -1,7 +1,8 @@
-package com.weison.spring.lifecycle.config;
+package com.weison.spring.lifecycle.single.config;
 
-import com.weison.spring.lifecycle.bean.BlackGirl;
-import com.weison.spring.lifecycle.bean.Girl;
+import com.weison.spring.lifecycle.single.bean.BlackGirl;
+import com.weison.spring.lifecycle.single.bean.Girl;
+import com.weison.spring.lifecycle.single.bean.Pen;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * @see
  */
 @Configuration
-@ComponentScan("com.weison.spring.lifecycle.bean")
+@ComponentScan("com.weison.spring.lifecycle.single.bean")
 public class LifeCycleConfig {
 
     @Bean(initMethod = "init", destroyMethod = "destroy")
@@ -24,5 +25,10 @@ public class LifeCycleConfig {
     @Bean(initMethod = "grow", destroyMethod = "getBaby")
     public BlackGirl littleBlackGirl() {
         return new BlackGirl().setName("Elene");
+    }
+
+    @Bean(initMethod = "open", destroyMethod = "close")
+    public Pen pen() {
+        return new Pen();
     }
 }

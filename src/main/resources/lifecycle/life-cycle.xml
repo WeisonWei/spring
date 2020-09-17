@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="person" class="com.weison.spring.lifecycle.bean.BlackGirl" init-method="grow" destroy-method="getBaby">
+    <bean id="person" class="com.weison.spring.lifecycle.single.bean.BlackGirl" init-method="grow" destroy-method="getBaby">
         <property name="name" value="Eleen"/>
     </bean>
 
