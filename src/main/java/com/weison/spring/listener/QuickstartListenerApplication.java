@@ -3,7 +3,7 @@ package com.weison.spring.listener;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * @author weixiaoxing
+ * @author Weison
  * @date 2020/9/17
  */
 public class QuickstartListenerApplication {
