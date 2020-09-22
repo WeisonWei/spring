@@ -1,4 +1,4 @@
-package com.weison.spring.assemble.batch;
+package com.weison.spring.assemble.selector;
 
 import com.weison.spring.assemble.bean.Bar;
 import com.weison.spring.assemble.config.BarConfiguration;

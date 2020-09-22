@@ -1,6 +1,6 @@
-package com.weison.spring.assemble.config;
+package com.weison.spring.profile.config;
 
-import com.weison.spring.assemble.annotation.EnableTavern;
+import com.weison.spring.profile.annotation.EnableTavern;
 import org.springframework.context.annotation.Configuration;
 
 /**

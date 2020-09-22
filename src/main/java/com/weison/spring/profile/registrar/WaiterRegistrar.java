@@ -1,6 +1,6 @@
-package com.weison.spring.assemble.batch;
+package com.weison.spring.profile.registrar;
 
-import com.weison.spring.assemble.bean.Waiter;
+import com.weison.spring.profile.bean.Waiter;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;

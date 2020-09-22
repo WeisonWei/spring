@@ -1,7 +1,9 @@
-package com.weison.spring.assemble.batch;
+package com.weison.spring.assemble.annotation;
 
 import com.weison.spring.assemble.bean.Boss;
 import com.weison.spring.assemble.config.BartenderConfiguration;
+import com.weison.spring.assemble.registrar.WaiterRegistrar;
+import com.weison.spring.assemble.selector.BarImportSelector;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.*;
