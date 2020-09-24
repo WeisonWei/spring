@@ -5,6 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!--IOC 容器的配置元信息分为 beans 和 context 两部分，分别展开来看-->
 
     <bean id="helloMysqlDaoImpl" class="com.weison.spring.ioc.xml.dao.HelloMysqlDaoImpl"></bean>
     <bean id="helloOracleDaoImpl" class="com.weison.spring.ioc.xml.dao.HelloOracleDaoImpl"></bean>
