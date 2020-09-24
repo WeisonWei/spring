@@ -5,6 +5,6 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="personOne" class="com.weison.spring.xml.bean.Person"></bean>
+    <bean id="personOne" class="com.weison.spring.ioc.xml.bean.Person"></bean>
 
 </beans>

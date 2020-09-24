@@ -5,28 +5,28 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="person" class="com.weison.spring.xml.bean.Person">
+    <bean id="person" class="com.weison.spring.ioc.xml.bean.Person">
         <property name="name" value="Weison"/>
         <property name="age" value="18"/>
     </bean>
 
-    <bean id="cat" class="com.weison.spring.xml.bean.Cat">
+    <bean id="cat" class="com.weison.spring.ioc.xml.bean.Cat">
         <property name="name" value="Nikki"/>
         <property name="master" ref="person"/>
     </bean>
 
-    <bean id="littleClass" class="com.weison.spring.complex.beans.pojo.Class">
+    <bean id="littleClass" class="com.weison.spring.ioc.complex.beans.pojo.Class">
         <property name="grade" value="小小班"/>
         <property name="name" value="小小班"/>
     </bean>
 
-    <bean id="teacher" class="com.weison.spring.complex.beans.pojo.Teacher">
+    <bean id="teacher" class="com.weison.spring.ioc.complex.beans.pojo.Teacher">
         <property name="age" value="30"/>
         <property name="name" value="小小班老师"/>
         <property name="AClass" ref="littleClass"/>
     </bean>
 
-    <bean id="student" name="student" class="com.weison.spring.complex.beans.pojo.Student">
+    <bean id="student" name="student" class="com.weison.spring.ioc.complex.beans.pojo.Student">
         <property name="age" value="3"/>
         <property name="name" value="小小"/>
         <property name="classes">

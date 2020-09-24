@@ -6,32 +6,32 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
 
-    <bean id="helloMysqlDaoImpl" class="com.weison.spring.xml.dao.HelloMysqlDaoImpl"></bean>
-    <bean id="helloOracleDaoImpl" class="com.weison.spring.xml.dao.HelloOracleDaoImpl"></bean>
-    <bean id="helloH2DaoImpl" class="com.weison.spring.xml.dao.HelloH2DaoImpl"></bean>
+    <bean id="helloMysqlDaoImpl" class="com.weison.spring.ioc.xml.dao.HelloMysqlDaoImpl"></bean>
+    <bean id="helloOracleDaoImpl" class="com.weison.spring.ioc.xml.dao.HelloOracleDaoImpl"></bean>
+    <bean id="helloH2DaoImpl" class="com.weison.spring.ioc.xml.dao.HelloH2DaoImpl"></bean>
 
-    <bean id="flower" class="com.weison.spring.xml.bean.Flower"></bean>
-    <bean id="dog" class="com.weison.spring.xml.bean.Dog"></bean>
+    <bean id="flower" class="com.weison.spring.ioc.xml.bean.Flower"></bean>
+    <bean id="dog" class="com.weison.spring.ioc.xml.bean.Dog"></bean>
 
 
     <!-- 开启注解配置 -->
     <context:annotation-config/>
-    <bean class="com.weison.spring.annotation.config.ComponentScanConfiguration"/>
+    <bean class="com.weison.spring.ioc.annotation.config.ComponentScanConfiguration"/>
     <!--注解驱动使用扫描bean路径-->
-    <context:component-scan base-package="com.weison.spring.annotation.bean"/>
+    <context:component-scan base-package="com.weison.spring.ioc.annotation.bean"/>
 
     <!-- 属性注入配置 -->
-    <bean class="com.weison.spring.annotation.bean.Mermaid">
+    <bean class="com.weison.spring.ioc.annotation.bean.Mermaid">
         <property name="name" value="${mermaid.name}"/>
     </bean>
 
     <!-- SpEL属性注入配置 -->
-    <bean class="com.weison.spring.annotation.bean.Pig">
+    <bean class="com.weison.spring.ioc.annotation.bean.Pig">
         <property name="name" value="#{'佩奇'}"/>
         <property name="order" value="#{pigPapa.order + 1}"/>
     </bean>
 
-    <bean class="com.weison.spring.annotation.bean.PigPapa">
+    <bean class="com.weison.spring.ioc.annotation.bean.PigPapa">
         <property name="name" value="#{'copy of ' + pig.name + '她爹'}"/>
         <property name="order" value="#{1}"/>
     </bean>
